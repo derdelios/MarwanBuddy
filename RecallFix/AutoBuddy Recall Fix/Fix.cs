@@ -19,7 +19,7 @@ namespace AutoBuddy_Recall_Fix
 
         static void OnTick(EventArgs args)
         {
-            if (LastCheckTime + CheckInterval < CurrentTime() && !Player.IsDead && CurrentTime() > 50)
+            if (LastCheckTime + CheckInterval < CurrentTime() && !Player.IsDead && CurrentTime() > 20)
             {
                 LastCheckTime = CurrentTime();
                 Vector3 currentPos = Player.Position;
