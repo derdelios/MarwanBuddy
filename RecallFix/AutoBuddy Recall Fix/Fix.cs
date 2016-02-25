@@ -10,7 +10,7 @@ namespace AutoBuddy_Recall_Fix
         public static DateTime StartTime = DateTime.UtcNow;
         public static Int32 LastCheckTime;
         public static Vector3 PreviousPos = Player.Position;
-        public static int CheckInterval = 15;
+        public static int CheckInterval = 5;
 
         public static void Init()
         {
@@ -19,7 +19,7 @@ namespace AutoBuddy_Recall_Fix
 
         static void OnTick(EventArgs args)
         {
-            if (LastCheckTime + CheckInterval < CurrentTime() && !Player.IsDead && CurrentTime() > 20)
+            if (LastCheckTime + CheckInterval < CurrentTime() && !Player.IsDead && CurrentTime() > 50)
             {
                 LastCheckTime = CurrentTime();
                 Vector3 currentPos = Player.Position;
